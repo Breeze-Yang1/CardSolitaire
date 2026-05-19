@@ -1,0 +1,131 @@
+{
+  "designSize": { "width": 1080, "height": 2080 },
+  "initialWaste": { "rank": "7", "suit": "club" },
+  "stock": [
+    { "rank": "4", "suit": "heart" },
+    { "rank": "7", "suit": "spade" },
+    { "rank": "7", "suit": "diamond" }
+  ],
+  "tableau": [
+    {
+      "id": "col1_top",
+      "rank": "4",
+      "suit": "club",
+      "x": 120,
+      "y": 1540,
+      "coveredBy": ["col1_mid"]
+    },
+    {
+      "id": "col1_mid",
+      "rank": "5",
+      "suit": "diamond",
+      "x": 155,
+      "y": 1350,
+      "coveredBy": ["col1_bottom"]
+    },
+    {
+      "id": "col1_bottom",
+      "rank": "6",
+      "suit": "heart",
+      "x": 190,
+      "y": 1160,
+      "coveredBy": []
+    },
+    {
+      "id": "col2_top",
+      "rank": "10",
+      "suit": "heart",
+      "x": 330,
+      "y": 1540,
+      "coveredBy": ["col2_mid"]
+    },
+    {
+      "id": "col2_mid",
+      "rank": "9",
+      "suit": "spade",
+      "x": 365,
+      "y": 1350,
+      "coveredBy": ["col2_bottom"]
+    },
+    {
+      "id": "col2_bottom",
+      "rank": "8",
+      "suit": "diamond",
+      "x": 400,
+      "y": 1160,
+      "coveredBy": []
+    },
+    {
+      "id": "col3_top",
+      "rank": "K",
+      "suit": "club",
+      "x": 540,
+      "y": 1540,
+      "coveredBy": ["col3_mid"]
+    },
+    {
+      "id": "col3_mid",
+      "rank": "Q",
+      "suit": "heart",
+      "x": 575,
+      "y": 1350,
+      "coveredBy": ["col3_bottom"]
+    },
+    {
+      "id": "col3_bottom",
+      "rank": "J",
+      "suit": "spade",
+      "x": 610,
+      "y": 1160,
+      "coveredBy": []
+    },
+    {
+      "id": "col4_top",
+      "rank": "8",
+      "suit": "spade",
+      "x": 750,
+      "y": 1540,
+      "coveredBy": ["col4_mid"]
+    },
+    {
+      "id": "col4_mid",
+      "rank": "7",
+      "suit": "heart",
+      "x": 785,
+      "y": 1350,
+      "coveredBy": ["col4_bottom"]
+    },
+    {
+      "id": "col4_bottom",
+      "rank": "6",
+      "suit": "club",
+      "x": 820,
+      "y": 1160,
+      "coveredBy": []
+    },
+    {
+      "id": "col5_top",
+      "rank": "A",
+      "suit": "spade",
+      "x": 535,
+      "y": 1010,
+      "coveredBy": ["col5_mid"]
+    },
+    {
+      "id": "col5_mid",
+      "rank": "2",
+      "suit": "heart",
+      "x": 570,
+      "y": 830,
+      "coveredBy": ["col5_bottom"]
+    },
+    {
+      "id": "col5_bottom",
+      "rank": "3",
+      "suit": "club",
+      "x": 605,
+      "y": 650,
+      "coveredBy": []
+    }
+  ]
+}

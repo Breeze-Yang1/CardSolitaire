@@ -1,0 +1,105 @@
+{
+  "designSize": { "width": 1080, "height": 2080 },
+  "initialWaste": { "rank": "6", "suit": "club" },
+  "stock": [
+    { "rank": "5", "suit": "spade" }
+  ],
+  "tableau": [
+    {
+      "id": "left_top",
+      "rank": "9",
+      "suit": "club",
+      "x": 170,
+      "y": 1510,
+      "coveredBy": ["left_mid"]
+    },
+    {
+      "id": "left_mid",
+      "rank": "8",
+      "suit": "diamond",
+      "x": 215,
+      "y": 1325,
+      "coveredBy": ["left_bottom"]
+    },
+    {
+      "id": "left_bottom",
+      "rank": "7",
+      "suit": "heart",
+      "x": 260,
+      "y": 1140,
+      "coveredBy": []
+    },
+    {
+      "id": "center_top",
+      "rank": "Q",
+      "suit": "heart",
+      "x": 500,
+      "y": 1510,
+      "coveredBy": ["center_mid"]
+    },
+    {
+      "id": "center_mid",
+      "rank": "J",
+      "suit": "spade",
+      "x": 540,
+      "y": 1325,
+      "coveredBy": ["center_bottom"]
+    },
+    {
+      "id": "center_bottom",
+      "rank": "10",
+      "suit": "club",
+      "x": 580,
+      "y": 1140,
+      "coveredBy": []
+    },
+    {
+      "id": "right_top",
+      "rank": "2",
+      "suit": "diamond",
+      "x": 820,
+      "y": 1510,
+      "coveredBy": ["right_mid"]
+    },
+    {
+      "id": "right_mid",
+      "rank": "3",
+      "suit": "club",
+      "x": 805,
+      "y": 1325,
+      "coveredBy": ["right_bottom"]
+    },
+    {
+      "id": "right_bottom",
+      "rank": "4",
+      "suit": "spade",
+      "x": 790,
+      "y": 1140,
+      "coveredBy": []
+    },
+    {
+      "id": "low_top",
+      "rank": "A",
+      "suit": "heart",
+      "x": 530,
+      "y": 1040,
+      "coveredBy": ["low_mid"]
+    },
+    {
+      "id": "low_mid",
+      "rank": "2",
+      "suit": "spade",
+      "x": 575,
+      "y": 860,
+      "coveredBy": ["low_bottom"]
+    },
+    {
+      "id": "low_bottom",
+      "rank": "3",
+      "suit": "diamond",
+      "x": 620,
+      "y": 680,
+      "coveredBy": []
+    }
+  ]
+}

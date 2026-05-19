@@ -1,0 +1,59 @@
+{
+  "designSize": { "width": 1080, "height": 2080 },
+  "initialWaste": { "rank": "4", "suit": "club" },
+  "stock": [
+    { "rank": "Q", "suit": "club" },
+    { "rank": "4", "suit": "heart" },
+    { "rank": "4", "suit": "diamond" }
+  ],
+  "tableau": [
+    {
+      "id": "left_top",
+      "rank": "K",
+      "suit": "club",
+      "x": 220,
+      "y": 1420,
+      "coveredBy": ["left_mid"]
+    },
+    {
+      "id": "left_mid",
+      "rank": "3",
+      "suit": "club",
+      "x": 270,
+      "y": 1240,
+      "coveredBy": ["left_bottom"]
+    },
+    {
+      "id": "left_bottom",
+      "rank": "3",
+      "suit": "diamond",
+      "x": 320,
+      "y": 1060,
+      "coveredBy": []
+    },
+    {
+      "id": "right_top",
+      "rank": "3",
+      "suit": "club",
+      "x": 770,
+      "y": 1420,
+      "coveredBy": ["right_mid"]
+    },
+    {
+      "id": "right_mid",
+      "rank": "3",
+      "suit": "club",
+      "x": 760,
+      "y": 1240,
+      "coveredBy": ["right_bottom"]
+    },
+    {
+      "id": "right_bottom",
+      "rank": "2",
+      "suit": "spade",
+      "x": 710,
+      "y": 1060,
+      "coveredBy": []
+    }
+  ]
+}

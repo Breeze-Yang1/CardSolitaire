@@ -1,0 +1,22 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "name": "LEVEL 1",
+      "file": "levels/level_001.json",
+      "stars": { "three": 35, "two": 55, "one": 80 }
+    },
+    {
+      "id": 2,
+      "name": "LEVEL 2",
+      "file": "levels/level_002.json",
+      "stars": { "three": 55, "two": 85, "one": 120 }
+    },
+    {
+      "id": 3,
+      "name": "LEVEL 3",
+      "file": "levels/level_003.json",
+      "stars": { "three": 80, "two": 120, "one": 170 }
+    }
+  ]
+}
