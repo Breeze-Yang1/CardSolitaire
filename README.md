@@ -19,6 +19,7 @@
 - `Classes/`：Cocos2d-x 业务代码。
 - `Resources/`：牌面资源、花色资源和关卡配置。
 - `Resources/levels/index.json`：关卡列表与星级时间阈值。
+- `docs/program_design.md`：程序设计说明，包含代码结构、卡牌扩展和回退功能扩展方式。
 - `docs/temporary_decisions.md`：当前阶段临时技术决策记录。
 - `tools/fetch_cocos2dx_317.ps1`：下载 Cocos2d-x 3.17.2 的辅助脚本。
 
