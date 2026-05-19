@@ -475,30 +475,43 @@ void GameScene::showCompletion()
     _levelCompleted = true;
     _finishStars = calculateStarCount(_elapsedTime, _levelInfo);
 
+    const Vec2 visibleOrigin = Director::getInstance()->getVisibleOrigin();
     const Size visibleSize = Director::getInstance()->getVisibleSize();
+    const Size panelSize(std::min(760.0f, visibleSize.width * 0.84f),
+        std::min(430.0f, visibleSize.height * 0.32f));
+    const float centerX = visibleOrigin.x + visibleSize.width * 0.5f;
+    const float centerY = visibleOrigin.y + visibleSize.height * 0.5f;
+    const float left = centerX - panelSize.width * 0.5f;
+    const float bottom = centerY - panelSize.height * 0.5f;
+
     _completionPanel = Node::create();
-    _completionPanel->setContentSize(Size(760.0f, 430.0f));
-    _completionPanel->setAnchorPoint(Vec2(0.5f, 0.5f));
-    _completionPanel->setIgnoreAnchorPointForPosition(false);
-    _completionPanel->setPosition(Vec2(visibleSize.width * 0.5f, visibleSize.height * 0.5f));
+    _completionPanel->setContentSize(panelSize);
+    _completionPanel->setAnchorPoint(Vec2::ZERO);
+    _completionPanel->setPosition(Vec2(left, bottom));
     addChild(_completionPanel, 200);
 
     DrawNode* panel = DrawNode::create();
-    panel->drawSolidRect(Vec2(-380.0f, -215.0f), Vec2(380.0f, 215.0f),
+    panel->drawSolidRect(Vec2::ZERO, Vec2(panelSize.width, panelSize.height),
         Color4F(0.08f, 0.10f, 0.14f, 0.92f));
-    panel->drawRect(Vec2(-380.0f, -215.0f), Vec2(380.0f, 215.0f),
+    panel->drawRect(Vec2::ZERO, Vec2(panelSize.width, panelSize.height),
         Color4F(0.95f, 0.82f, 0.36f, 1.0f));
     _completionPanel->addChild(panel);
 
-    Label* title = Label::createWithSystemFont("LEVEL CLEAR", "Arial", 58);
-    title->setPosition(Vec2(0.0f, 140.0f));
+    const float titleFontSize = std::max(38.0f, std::min(58.0f, panelSize.height * 0.135f));
+    const float timeFontSize = std::max(28.0f, std::min(42.0f, panelSize.height * 0.098f));
+    const float starFontSize = std::max(42.0f, std::min(64.0f, panelSize.height * 0.15f));
+    const float buttonFontSize = std::max(26.0f, std::min(36.0f, panelSize.height * 0.084f));
+    const float panelCenterX = panelSize.width * 0.5f;
+
+    Label* title = Label::createWithSystemFont("LEVEL CLEAR", "Arial", titleFontSize);
+    title->setPosition(Vec2(panelCenterX, panelSize.height * 0.82f));
     _completionPanel->addChild(title, 2);
 
     const int totalSeconds = static_cast<int>(_elapsedTime);
     Label* time = Label::createWithSystemFont(
         StringUtils::format("TIME %02d:%02d", totalSeconds / 60, totalSeconds % 60),
-        "Arial", 42);
-    time->setPosition(Vec2(0.0f, 56.0f));
+        "Arial", timeFontSize);
+    time->setPosition(Vec2(panelCenterX, panelSize.height * 0.64f));
     _completionPanel->addChild(time, 2);
 
     std::string starText;
@@ -510,17 +523,14 @@ void GameScene::showCompletion()
             starText += " ";
         }
     }
-    Label* stars = Label::createWithSystemFont(starText, "Arial", 64);
+    Label* stars = Label::createWithSystemFont(starText, "Arial", starFontSize);
     stars->setColor(Color3B(255, 216, 72));
-    stars->setPosition(Vec2(0.0f, -28.0f));
+    stars->setPosition(Vec2(panelCenterX, panelSize.height * 0.44f));
     _completionPanel->addChild(stars, 2);
 
-    Label* home = Label::createWithSystemFont("BACK TO LEVELS", "Arial", 36);
-    home->setPosition(Vec2(0.0f, -142.0f));
+    Label* home = Label::createWithSystemFont("BACK TO LEVELS", "Arial", buttonFontSize);
+    home->setPosition(Vec2(panelCenterX, panelSize.height * 0.18f));
     _completionPanel->addChild(home, 2);
-
-    _completionPanel->setScale(0.72f);
-    _completionPanel->runAction(EaseBackOut::create(ScaleTo::create(0.24f, 1.0f)));
 }
 
 void GameScene::returnToLevelSelect()
